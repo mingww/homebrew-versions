@@ -95,7 +95,8 @@ class Gcc49 < Formula
       "--enable-plugin",
       "--enable-lto",
       # a no-op unless --HEAD is built because in head warnings will raise errs.
-      "--disable-werror"
+      "--disable-werror",
+      "--use-llvm"
     ]
 
     args << '--disable-nls' unless build.include? 'enable-nls'
